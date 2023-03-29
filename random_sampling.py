@@ -89,7 +89,7 @@ def random_sampling(da,
                 print('Class '+ str(_class)+ ': sampling at '+ str(round(no_of_points)) + 'locations')
             else:
                 no_of_points=n_available
-                print('Class '+ str(_class)+ ': not enough pixels as requested, sampling at '+str(int(no_of_points))+' locations')
+                print('Class '+ str(_class)+ ': not enough pixels as requested, sampling at all '+str(int(no_of_points))+' locations')
             sample_loc = df[df[class_attr] == _class].sample(n=int(round(no_of_points)))
             samples.append(sample_loc)   
 
@@ -105,7 +105,7 @@ def random_sampling(da,
                 print('Class '+ str(_class)+ ': sampling at '+ str(round(no_of_points)) + ' locations')
             else:
                 no_of_points=n_available
-                print('Class '+ str(_class)+ ': not enough pixels as requested, sampling at '+str(int(no_of_points))+' locations')
+                print('Class '+ str(_class)+ ': not enough pixels as requested, sampling at all '+str(int(no_of_points))+' locations')
             sample_loc = df[df[class_attr] == _class].sample(n=int(round(no_of_points)))
             samples.append(sample_loc)   
             
@@ -145,7 +145,7 @@ def random_sampling(da,
                         print('Class '+ str(_class)+ ': sampling at '+ str(round(no_of_points)) + ' locations')
                     else:
                         no_of_points=n_available
-                        print('Class '+ str(_class)+ ': not enough pixels as requested, sampling'+str(int(no_of_points))+'locations')
+                        print('Class '+ str(_class)+ ': not enough pixels as requested, sampling at all '+str(int(no_of_points))+' locations')
                     sample_loc = df[df[class_attr] == _class].sample(n=int(round(no_of_points)))
                     samples.append(sample_loc)  
                     
