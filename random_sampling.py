@@ -90,7 +90,7 @@ def random_sampling(da,
             else:
                 no_of_points=n_available
                 print('Class '+ str(_class)+ ': not enough pixels as requested, sampling at '+str(int(no_of_points))+' locations')
-            sample_loc = df[df[class_attr] == _class].sample(n=int(round(n_available)))
+            sample_loc = df[df[class_attr] == _class].sample(n=int(round(no_of_points)))
             samples.append(sample_loc)   
 
     if sampling == 'equal_stratified_random':
